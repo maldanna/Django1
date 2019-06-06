@@ -4,4 +4,5 @@ example
 
 return redirect('https://example.com/')  
 takes you to the https://example.com/ page
+ where as render will take you to template 
 
