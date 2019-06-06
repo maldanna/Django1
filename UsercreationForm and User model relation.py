@@ -1,3 +1,23 @@
+#link nice  to understand extend User model 
+https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html
+
+important note:
+    
+    
+    1.we have signup form to create acccount for user we can make form using bootstrap or html others and can get data form them and s
+    store into table is old process and basic one
+    #2
+    2.make simple signup form django providing cool featue for  it  that is it 
+    """have in built form that is UserCreationForm we havee
+    
+    "we have few fields int it we can ovrride that exisiting filed and also we can add more fields as per our requirement 
+    code is below"""
+    
+    
+
+
+
+
 user model is built in django so wew can use this model for hadle user details
 class SignUpForm(UserCreationForm):
     username = forms.CharField(forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username'}))
