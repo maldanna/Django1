@@ -1,0 +1,28 @@
+orm:object relation mapper
+
+ from appname.models import modelname
+ 1.modelname.objects.all() o/p: it will give all objets in that table in list form list contains dictinary (i,, each object is represented by
+ a dictionary )
+ 
+ can enter details of objects by uisn g this below one  or direct form save method
+ (n case your form created using forms.Form  in forms.py)
+ 
+ 2.modelname.objects.create(author=me, title='Sample title', text='Test')
+ 
+ 3. modelname.objects.get(username='ola') thi like where conditions in oracle databse it will give single object
+ 
+ 
+ 4.Filter objects
+A big part of QuerySets is the ability to filter them. Let's say we want to find all posts that user ola authored. We will use filter instead of all in Post.objects.all(). In parentheses we state what condition(s) a blog post needs to meet to end up in our queryset. In our case, the condition is that author should be equal to me. The way to write it in Django is author=me. Now our piece of code looks like this:
+
+command-line
+>>> Post.objects.filter(author=me)
+<QuerySet [<Post: Sample title>, <Post: Post number 2>, <Post: My 3rd post!>, <Post: 4th title of post>]>
+Or maybe we want to see all the posts that contain the word 'title' in the title field?
+
+command-line
+>>> Post.objects.filter(title__contains='title')
+<QuerySet [<Post: Sample title>, <Post: 4th title of post>]>
+ 
+ 
+ 
