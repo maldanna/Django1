@@ -12,11 +12,37 @@ important note:
     
     "we have few fields int it we can ovrride that exisiting filed and also we can add more fields as per our requirement 
     code is below"""
+ 
+*****************************
     
+
+class UserRegisterForm(UserCreationForm):
+    email = forms.EmailField()
+#by this we will get same form what we have in admin
+#but after ovverride it that feature wont get
+    class Meta:     
+
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
+
+
+class UserRegisterForm(UserCreationForm):
     
+    # her ewe did over ride so  we wont get sane feature slike in admin user form i...e
+    #password should contain 8 charecter likke that
+    
+    username = forms.CharField()
+    email=forms.EmailField( max_length=64, help_text='Enter a valid email address')
+    password1=forms.CharField()
+    password2=forms.CharField()
+    class Meta(UserCreationForm.Meta):
+        model = User
+        # I've tried both of these 'fields' declaration, result is the same
+        fields = ('username', 'email', 'password1', 'password2', )
 
 
 
+*********************************************
 
 user model is built in django so wew can use this model for hadle user details
 class SignUpForm(UserCreationForm):
