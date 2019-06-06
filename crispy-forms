@@ -1,0 +1,29 @@
+crispy_forms:
+
+https://simpleisbetterthancomplex.com/tutorial/2018/11/28/advanced-form-rendering-with-django-crispy-forms.html
+
+configurations:
+
+in settings
+
+INSTALLED_APPS = [
+    ...
+
+    'crispy_forms',
+]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+
+
+from django import forms
+
+STATES = (
+    ('', 'Choose...'),
+    ('MG', 'Minas Gerais'),
+    ('SP', 'Sao Paulo'),
+    ('RJ', 'Rio de Janeiro')
+)
+
+in this first stroe in databases ans second one shows to users
