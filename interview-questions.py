@@ -27,3 +27,5 @@ media_rul: this is used to access our file throught web browsers(to access files
     
     
     
+difference between null and blank
+https://simpleisbetterthancomplex.com/tips/2016/07/25/django-tip-8-blank-or-null.html
